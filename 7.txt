@@ -1,0 +1,30 @@
+public class Book
+{
+    public string Title { get; set; }
+    // Other book properties...
+}
+
+public class Bookshelf
+{
+    private List<Book> books = new List<Book>();
+
+    public Book this[string title]
+    {
+        get { return books.FirstOrDefault(book => book.Title == title); }
+        set
+        {
+            var existingBook = books.FirstOrDefault(book => book.Title == title);
+            if (existingBook != null)
+            {
+                // Update the existing book.
+                existingBook.Title = value.Title;
+                // Update other book properties as needed...
+            }
+            else
+            {
+                // Add a new book.
+                books.Add(value);
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+[Flags]
+public enum FilePermission
+{
+    None = 0,
+    Read = 1,
+    Write = 2,
+    Execute = 4
+}
+
+public class User
+{
+    public string Name { get; set; }
+    public FilePermission Permissions { get; set; }
+}
+
+// Example usage:
+User user1 = new User { Name = "User1", Permissions = FilePermission.Read | FilePermission.Write };
+Console.WriteLine($"{user1.Name} has the following permissions: {user1.Permissions}");

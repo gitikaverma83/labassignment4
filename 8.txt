@@ -1,0 +1,27 @@
+public enum Seasons
+{
+    Spring,
+    Summer,
+    Autumn,
+    Winter
+}
+
+public class SeasonInfo
+{
+    public string GetSeasonMessage(Seasons season)
+    {
+        switch (season)
+        {
+            case Seasons.Spring:
+                return "It's springtime!";
+            case Seasons.Summer:
+                return "It's summer!";
+            case Seasons.Autumn:
+                return "It's autumn!";
+            case Seasons.Winter:
+                return "It's winter!";
+            default:
+                return "Invalid season.";
+        }
+    }
+}

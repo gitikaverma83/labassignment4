@@ -1,0 +1,10 @@
+public class CustomList<T>
+{
+    private List<T> items = new List<T>();
+
+    public T this[int index]
+    {
+        get { return items[index]; }
+        set { items[index] = value; }
+    }
+}

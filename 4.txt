@@ -1,0 +1,11 @@
+public class Temperature
+{
+    private double celsius;
+
+    public Temperature(double celsius)
+    {
+        this.celsius = celsius;
+    }
+
+    public double Fahrenheit => (celsius * 9 / 5) + 32;
+}
